@@ -1,0 +1,14 @@
+--- psgml-1.2.5/Makefile.in.compile	2006-02-27 11:01:57.000000000 +0100
++++ psgml-1.2.5/Makefile.in	2006-02-27 11:02:18.000000000 +0100
+@@ -37,11 +37,6 @@
+ install-info:
+ 	$(INSTALL_DATA) psgml.info $(infodir)
+ 	$(INSTALL_DATA) psgml-api.info $(infodir)
+-	if $(SHELL) -c 'install-info --version' \
+-		>/dev/null 2>&1; then \
+-		install-info --info-dir=$(infodir) psgml.info; \
+-		install-info --info-dir=$(infodir) psgml-api.info; \
+-	else true; fi
+ 
+ 
+ xemacs:
