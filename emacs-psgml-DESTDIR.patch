@@ -1,0 +1,25 @@
+--- psgml-1.2.5/Makefile.in~	2008-02-04 18:44:23.000000000 +0100
++++ psgml-1.2.5/Makefile.in	2008-02-04 18:48:07.000000000 +0100
+@@ -27,16 +27,16 @@
+ 
+ 
+ install: compile 
+-	$(SHELL) mkinstalldirs $(lispdir)
++	$(SHELL) mkinstalldirs $(DESTDIR)$(lispdir)
+ 	for p in *.elc; do \
+-	  echo " $(INSTALL_DATA) $$p $(lispdir)/$$p"; \
+-	  $(INSTALL_DATA) $$p $(lispdir)/$$p; \
++	  echo " $(INSTALL_DATA) $$p $(DESTDIR)$(lispdir)/$$p"; \
++	  $(INSTALL_DATA) $$p $(DESTDIR)$(lispdir)/$$p; \
+ 	done
+-	$(INSTALL_DATA) iso88591.map $(lispdir)
++	$(INSTALL_DATA) iso88591.map $(DESTDIR)$(lispdir)
+ 
+ install-info:
+-	$(INSTALL_DATA) psgml.info $(infodir)
+-	$(INSTALL_DATA) psgml-api.info $(infodir)
++	$(INSTALL_DATA) psgml.info $(DESTDIR)$(infodir)
++	$(INSTALL_DATA) psgml-api.info $(DESTDIR)$(infodir)
+ 
+ 
+ xemacs:
