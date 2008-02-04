@@ -1,7 +1,7 @@
 Summary:	A GNU Emacs major mode for editing SGML documents
 Name:		emacs-psgml
 Version:	1.2.5
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Applications/Editors/Emacs
 Source0:	ftp://ftp.lysator.liu.se/pub/sgml/psgml-%{version}.tar.gz
