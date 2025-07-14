@@ -30,8 +30,8 @@ and also several commands for folding editing.
 
 %prep
 %setup -q -n psgml-%{version}
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 %build
 %configure2_13
